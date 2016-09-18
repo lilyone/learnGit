@@ -1,0 +1,21 @@
+body,ul,li,ol,dl,dt,dd,fieldset,p{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+}
+img{
+	border: 0;
+}
+li{
+	list-style: none;
+}
+body{
+	font-size: 12px;
+	font-family: "microsoft yahei";
+	min-width: 800px;
+}
+html,body{
+	height: 100%;
+}
