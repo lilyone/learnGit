@@ -1,0 +1,193 @@
+.carTop{
+	height: 100px;
+	line-height: 100px;
+	margin-bottom: 10px;
+}
+.carContainer{
+	margin: 0 auto;
+	width: 990px;
+}
+h1 .car_logo{
+	float: left;
+	margin-top: 22px;
+}
+#carStatus{
+	width: 550px;
+	height: 46px;
+	float: right;
+	margin-top: 28px;
+}
+.titleOfCar{
+	height: 40px;
+	line-height: 40px;
+	font-size: 16px;
+}
+
+#haveNoPro p{
+	text-align: center;
+	margin: 200px auto;
+	font-size: 14px;
+}
+#haveNoPro p a{
+	font-size: 14px;
+	color: #abd13e;
+}
+.baoyou{
+	height: 48px;
+	border-top: 1px solid #cbcbcb;
+	border-bottom: 1px solid #cbcbcb;
+	line-height: 48px;
+	background: #f1f2ee url(../img/car1.png) no-repeat 371px -80px;
+	margin-bottom: 5px;
+	display: none;
+}
+.baoyou span{
+	float: left;
+	margin:9px 20px 0;
+	width: 30px;
+	height: 30px;
+	background: url(../img/car1.png) no-repeat 0 0;
+}
+a:hover{
+	color: #eb6100;
+	text-decoration: underline;
+}
+#carTitle{
+	height: 40px;
+    background-color: #fafbf8;
+    border-top: 1px solid #edecec;
+    border-bottom: 1px solid #edecec;
+    font: 400 12px/40px "宋体";
+    position: relative;
+}
+#carTitle input {
+    float: left;
+    margin: 13px 27px 0 35px;
+}
+
+#haveNoPro{
+	height: 340px;
+	background:  url(../img/cart_none.png) no-repeat 400px 60px;
+	width: 990px;
+	margin-top: -140px;
+}
+#carBody li{
+	border-bottom: 1px dotted #e1e1e1;
+    padding: 20px 0 16px;
+    float: left;
+    width: 990px;
+}
+#carBody .check {
+    width: 40px;
+    float: left;
+    margin: 22px 0 0 30px;
+}
+#carBody li .pic {
+    float: left;
+    width: 75px;
+}
+#carBody .pic img {
+    width: 60px;
+    height: 60px;
+}
+#carBody .name {
+    margin: 10px 40px 0 0;
+    width: 270px;
+    float: left;
+}
+#carBody .price {
+    font: 400 18px/22px "Microsoft YaHei";
+    float: left;
+    width: 101px;
+    margin-top: 14px;
+    padding-left: 14px;
+}
+#carBody .num_toBuy {
+    float: left;
+    margin: 0 0 0 25px;
+    width: 84px;
+    margin-top: 14px;
+}
+#carBody .num_toBuy p{
+	float: left;
+}
+#carBody .num input{
+    border: 1px solid #dadada;
+    width: 36px;
+    font-size: 14px;
+    height: 14px;
+    padding: 2px 3px;
+    line-height: 14px;
+    float: left;
+    text-align: center;
+    display: inline;
+    margin: -2px 5px;
+}
+#carBody .subtotal {
+    float: left;
+    width: 115px;
+    margin-top: 10px;
+    margin-left: 20px;
+    font: 400 20px/22px "Microsoft YaHei";
+    color: #ff9000;
+    text-align: center;
+}
+#carBody li .distribution {
+    float: left;
+    width: 30px;
+    text-align: center;
+    line-height: 22px;
+    margin-top: 10px;
+    margin-left: 28px;
+}
+#carBody .operating {
+    width: 80px;
+    float: right;
+    line-height: 22px;
+}
+
+.pro_do{
+	margin-left: 46px;
+	float: left;
+	margin-top: 6px;
+}
+.totalChange{
+	clear: both;
+	height: 170px;
+	font-size: 14px;
+	text-align: right;
+	padding-right: 20px;
+}
+.totalChange{
+	display: none;
+}
+#allPrice{
+	height: 60px;
+	line-height: 60px;	
+	
+}
+#allPrice span{
+	color: #eb6100;
+}
+#allPrices #qwe{
+	font-size: 20px;
+	font-weight: bold;
+	color: #eb6100;
+}
+.toPay{
+	float: right;
+	width: 140px;
+	height: 40px;
+	background: url(../img/jiesuan.png) no-repeat left top;
+}
+#goOn{
+	float: right;
+	width: 98px;
+	height: 38px;
+	line-height: 38px;
+	padding-left: 16px;
+	text-align: left;
+	font-size: 18px;
+	color: #699637;
+	background: url(../img/jixu.gif) no-repeat left center;
+}

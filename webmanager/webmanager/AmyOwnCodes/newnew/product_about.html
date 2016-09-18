@@ -1,0 +1,1750 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>本来--商品详情</title>
+		<link rel="stylesheet" type="text/css" href="css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="css/others.css"/>
+		<script src="js/jquery-3.0.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+		
+	</head>
+	<body>
+		<!--侧边栏-->
+		<div class="right_show">
+			<a href="#head" class="to_top"></a>
+			<div class="bigClude">
+				<div id="goodsIncar">
+					<dl>
+						<dt><img src="img/index3/dui19.jpg"/></dt>
+						<dd>
+							<p>文莱有机生蓝虾51/60 300g/袋</p>
+							<em>X1加入成功</em>
+							<em id="nowPrice">￥100.8</em>
+						</dd>
+					</dl>
+				</div>
+				<a href="car.html" class="to_buy" id="to_buy">
+					<span id="pro_count">0</span>
+				</a>		
+			</div>
+				
+			<a href="#" class="to_ask"></a>
+			<a href="#" class="to_erwei"></a>
+		</div>
+		<!--head-->
+		<div class="head container" id="head">
+			<div class="h_left">
+				<span>您好，请</span><a href="login.html">[登录]</a><a href="regist.html">[注册]</a><a href="#">[机构会员]</a>
+			</div>
+			<div class="h_center">
+				<span class="proCar"></span>
+				<a href="#" class="city">
+					送至：<span>北京</span>
+				</a>
+			</div>
+			<ul class="h_right">
+				<li><a href="#">我的订单</a></li>
+				<li><a href="#">本来礼品</a></li>
+				<li id="handPhone"><a href="#">掌上本来</a></li>
+				<li id="c_fu"><a href="#">客户服务<span></span></a></li>
+			</ul>
+		</div>
+		<!--t_banner-->
+		<div class="h_banner" id="h_banner">
+			<ul>
+				<li><a href="#"><img src="img/hd1.jpg"/></a></li><!--1920*60-->
+				<li><a href="#"><img src="img/hd2.jpg"/></a></li>
+				<li><a href="#"><img src="img/hd3.jpg"/></a></li>
+				<li><a href="#"><img src="img/hd4.jpg"/></a></li>
+				<li><a href="#"><img src="img/hd5.jpg"/></a></li>
+			</ul>
+		</div>
+		<!--logoMessage-->
+		<div class="logoMessage container">
+			<div class="hotSearchP">
+				<a href="#">月饼</a>
+				<a href="#">大闸蟹</a>
+				<a href="#">本来鸡卵</a>
+				<a href="#">厄尔多瓜白虾</a>
+				<a href="#">北郎中鲜肉</a>		
+			</div>
+			<div class="logo">
+				<a href="#"><img src="img/n_logo.jpg"/></a>
+			</div>
+			<form action="" method="post" id="main_search">
+				<input type="text" name="" id="searchTxt" value="" />
+				<input type="submit" value="" id="submitBtn"/>
+			</form>
+			<dl class="mySelf">
+				<dt>
+					<a href="#" >
+						<span class="mySelf_icon1"></span>我的本来<span class="mySelf_icon2"></span>		
+					</a>
+				</dt>
+				<dd>
+					<div class="mySelf_menu">
+						<div class="login_do">
+							<p >您好，请 <a href="#">[登录]</a></p>
+						</div>
+						<div class="login_list">
+							<ul class="list_left">
+								<li><a href="#">订单状态查询</a>(<span>0</span>)</li>
+								<li><a href="#">待支付订单</a>(<span>0</span>)</li>
+								<li><a href="#">待评价商品</a>(<span>0</span>)</li>
+								<li><a href="#">优惠券</a>(<span>0</span>)</li>
+								<li><a href="#">我的会员</a> &gt;</li>
+								<li><a href="#">我的积分</a> &gt;</li>
+							</ul>	
+							<ul class="list_right">
+								<li><a href="#">我的订单</a>&gt;</li>
+								<li><a href="#">我的宅配</a>&gt;</li>
+								<li><a href="#">我的收藏</a>&gt;</li>
+								<li><a href="#">我的退货</a>&gt;</li>
+								<li><a href="#">充&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;值</a>&gt;</li>
+								
+							</ul>	
+						</div>
+					</div>
+				</dd>
+			</dl>
+			
+
+			
+				<dl class="shoppingCar">
+					<dt>
+						<a href="#">
+							<span class="shoppingCar_icon1"></span>购物车<span class="shoppingCar_icon2"></span>
+						</a>
+					</dt>
+					<dd>
+						<div class="shop_menu">
+							购物车中还没有商品，赶紧抢购吧！
+						</div>
+					</dd>
+				</dl>			
+		</div>
+		
+<!--nav-->
+	
+	<div class="nav">
+		<div class="container">
+			<div  class="listBtn">
+				
+				
+				<p class="progAd1">所有商品分类</p><span class="icons"></span>
+				
+				
+				<div class="pro_list" id="pro_list">
+					
+					<ul>
+						<li class="list_top">
+							<em class="list_iconLeft"></em><span class="text1">镇店之宝</span><span class="list_iconRight">&gt;</span>
+							<div class="hide">
+								<dl>
+									<dt><a href="#">中产品味</a></dt>
+									<dd>
+										<a href="#">澳洲净骨牛排</a>
+										<a href="#">火龙果</a>
+										<a href="#">深海鳕鱼</a>
+										<a href="#">库尔勒香梨</a>
+										<a href="#">新西兰青口贝</a>
+										<a href="#">野生海参</a>
+										<a href="#">进口牛油果</a>
+										<a href="#">品质粮油</a>
+										<a href="#">鲁花</a>
+										<a href="#">手工曲奇</a>
+										<a href="#">王博士雪花猪</a>
+									</dd>
+								</dl>
+								
+								<dl>
+									<dt><a href="#">性价比之王</a></dt>
+									<dd>
+										<a href="#">厨房用品</a>
+										<a href="#">休闲食品</a>
+										<a href="#">精选果蔬</a>
+										<a href="#">乳品母婴</a>
+										<a href="#">龙利鱼柳</a>
+										<a href="#">热卖虾仁</a>
+										<a href="#">三文鱼</a>
+										<a href="#">金品粮油</a>
+									</dd>
+								</dl>
+								
+								<dl>
+									<dt><a href="#">有机生活</a></dt>
+									<dd>
+										<a href="#">有机生鲜</a>
+										<a href="#">有机精选</a>
+										<a href="#">杂粮礼盒</a>
+										<a href="#">有机生面</a>
+										<a href="#">有机羊肉</a>
+										<a href="#">牛奶酸奶</a>
+										<a href="#">有机辅食</a>
+										<a href="#">有机零食</a>
+									</dd>
+								</dl>
+								
+								<dl>
+									<dt><a href="#">全球尖货</a></dt>
+									<dd>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+									</dd>
+								</dl>
+								
+								<dl>
+									<dt><a href="#">冲击味蕾</a></dt>
+									<dd>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+									</dd>
+								</dl>
+							</div>
+						</li>
+						
+						
+						
+						<li >
+							<em class="list_iconLeft"></em><span class="text1">水果</span><span class="list_iconRight">&gt;</span>
+							<div class="hide">
+								<dl>
+									<dt><a href="#">中产品味</a></dt>
+									<dd>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+									</dd>
+								</dl>
+								
+								<dl>
+									<dt><a href="#">中产品味</a></dt>
+									<dd>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+									</dd>
+								</dl>
+								
+								<dl>
+									<dt><a href="#">中产品味</a></dt>
+									<dd>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+									</dd>
+								</dl>
+								
+								<dl>
+									<dt><a href="#">中产品味</a></dt>
+									<dd>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+									</dd>
+								</dl>
+								
+								<dl>
+									<dt><a href="#">中产品味</a></dt>
+									<dd>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+									</dd>
+								</dl>
+							</div>
+						</li>
+						
+						<li >
+							<em class="list_iconLeft"></em><span class="text1">蔬菜</span><span class="list_iconRight">&gt;</span>
+							<div class="hide">
+								<dl>
+									<dt><a href="#">中产品味</a></dt>
+									<dd>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+									</dd>
+								</dl>
+								
+								<dl>
+									<dt><a href="#">中产品味</a></dt>
+									<dd>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+									</dd>
+								</dl>
+								
+								<dl>
+									<dt><a href="#">中产品味</a></dt>
+									<dd>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+									</dd>
+								</dl>
+								
+								<dl>
+									<dt><a href="#">中产品味</a></dt>
+									<dd>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+									</dd>
+								</dl>
+								
+								<dl>
+									<dt><a href="#">中产品味</a></dt>
+									<dd>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+									</dd>
+								</dl>
+							</div>
+						</li>
+						
+						<li >
+							<em class="list_iconLeft"></em><span class="text1">肉蛋禽品</span><span class="list_iconRight">&gt;</span>
+							<div class="hide">
+								<dl>
+									<dt><a href="#">中产品味</a></dt>
+									<dd>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+									</dd>
+								</dl>
+								
+								<dl>
+									<dt><a href="#">中产品味</a></dt>
+									<dd>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+									</dd>
+								</dl>
+								
+								<dl>
+									<dt><a href="#">中产品味</a></dt>
+									<dd>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+									</dd>
+								</dl>
+								
+								<dl>
+									<dt><a href="#">中产品味</a></dt>
+									<dd>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+									</dd>
+								</dl>
+								
+								<dl>
+									<dt><a href="#">中产品味</a></dt>
+									<dd>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+									</dd>
+								</dl>
+							</div>
+						</li>
+						
+						<li >
+							<em class="list_iconLeft"></em><span class="text1">水产海鲜</span><span class="list_iconRight">&gt;</span>
+							<div class="hide">
+								<dl>
+									<dt><a href="#">中产品味</a></dt>
+									<dd>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+									</dd>
+								</dl>
+								
+								<dl>
+									<dt><a href="#">中产品味</a></dt>
+									<dd>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+									</dd>
+								</dl>
+								
+								<dl>
+									<dt><a href="#">中产品味</a></dt>
+									<dd>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+									</dd>
+								</dl>
+								
+								<dl>
+									<dt><a href="#">中产品味</a></dt>
+									<dd>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+									</dd>
+								</dl>
+								
+								<dl>
+									<dt><a href="#">中产品味</a></dt>
+									<dd>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+									</dd>
+								</dl>
+							</div>
+						</li>
+						
+						<li >
+							<em class="list_iconLeft"></em><span class="text1">烘焙熟食</span><span class="list_iconRight">&gt;</span>
+							<div class="hide">
+								<dl>
+									<dt><a href="#">中产品味</a></dt>
+									<dd>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+									</dd>
+								</dl>
+								
+								<dl>
+									<dt><a href="#">中产品味</a></dt>
+									<dd>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+									</dd>
+								</dl>
+								
+								<dl>
+									<dt><a href="#">中产品味</a></dt>
+									<dd>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+									</dd>
+								</dl>
+								
+								<dl>
+									<dt><a href="#">中产品味</a></dt>
+									<dd>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+									</dd>
+								</dl>
+								
+								<dl>
+									<dt><a href="#">中产品味</a></dt>
+									<dd>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+									</dd>
+								</dl>
+							</div>
+						</li>
+						
+						<li >
+							<em class="list_iconLeft"></em><span class="text1">粮油副食</span><span class="list_iconRight">&gt;</span>
+							<div class="hide">
+								<dl>
+									<dt><a href="#">中产品味</a></dt>
+									<dd>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+									</dd>
+								</dl>
+								
+								<dl>
+									<dt><a href="#">中产品味</a></dt>
+									<dd>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+									</dd>
+								</dl>
+								
+								<dl>
+									<dt><a href="#">中产品味</a></dt>
+									<dd>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+									</dd>
+								</dl>
+								
+								<dl>
+									<dt><a href="#">中产品味</a></dt>
+									<dd>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+									</dd>
+								</dl>
+								
+								<dl>
+									<dt><a href="#">中产品味</a></dt>
+									<dd>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+									</dd>
+								</dl>
+							</div>
+						</li>
+						
+						<li >
+							<em class="list_iconLeft"></em><span class="text1">零食酒水</span><span class="list_iconRight">&gt;</span>
+							<div class="hide">
+								<dl>
+									<dt><a href="#">中产品味</a></dt>
+									<dd>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+									</dd>
+								</dl>
+								
+								<dl>
+									<dt><a href="#">中产品味</a></dt>
+									<dd>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+									</dd>
+								</dl>
+								
+								<dl>
+									<dt><a href="#">中产品味</a></dt>
+									<dd>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+									</dd>
+								</dl>
+								
+								<dl>
+									<dt><a href="#">中产品味</a></dt>
+									<dd>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+									</dd>
+								</dl>
+								
+								<dl>
+									<dt><a href="#">中产品味</a></dt>
+									<dd>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+									</dd>
+								</dl>
+							</div>
+						</li>
+						
+						<li >
+							<em class="list_iconLeft"></em><span class="text1">乳品母婴</span><span class="list_iconRight">&gt;</span>
+							<div class="hide">
+								<dl>
+									<dt><a href="#">中产品味</a></dt>
+									<dd>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+									</dd>
+								</dl>
+								
+								<dl>
+									<dt><a href="#">中产品味</a></dt>
+									<dd>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+									</dd>
+								</dl>
+								
+								<dl>
+									<dt><a href="#">中产品味</a></dt>
+									<dd>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+									</dd>
+								</dl>
+								
+								<dl>
+									<dt><a href="#">中产品味</a></dt>
+									<dd>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+									</dd>
+								</dl>
+								
+								<dl>
+									<dt><a href="#">中产品味</a></dt>
+									<dd>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+									</dd>
+								</dl>
+							</div>
+						</li>
+						
+						<li >
+							<em class="list_iconLeft"></em><span class="text1">厨房用品</span><span class="list_iconRight">&gt;</span>
+							<div class="hide">
+								<dl>
+									<dt><a href="#">中产品味</a></dt>
+									<dd>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+									</dd>
+								</dl>
+								
+								<dl>
+									<dt><a href="#">中产品味</a></dt>
+									<dd>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+									</dd>
+								</dl>
+								
+								<dl>
+									<dt><a href="#">中产品味</a></dt>
+									<dd>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+									</dd>
+								</dl>
+								
+								<dl>
+									<dt><a href="#">中产品味</a></dt>
+									<dd>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+									</dd>
+								</dl>
+								
+								<dl>
+									<dt><a href="#">中产品味</a></dt>
+									<dd>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+									</dd>
+								</dl>
+							</div>
+						</li>
+						
+						<li >
+							<em class="list_iconLeft"></em><span class="text1">料理之味</span><span class="list_iconRight">&gt;</span>
+							<div class="hide">
+								<dl>
+									<dt><a href="#">中产品味</a></dt>
+									<dd>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+									</dd>
+								</dl>
+								
+								<dl>
+									<dt><a href="#">中产品味</a></dt>
+									<dd>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+									</dd>
+								</dl>
+								
+								<dl>
+									<dt><a href="#">中产品味</a></dt>
+									<dd>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+									</dd>
+								</dl>
+								
+								<dl>
+									<dt><a href="#">中产品味</a></dt>
+									<dd>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+									</dd>
+								</dl>
+								
+								<dl>
+									<dt><a href="#">中产品味</a></dt>
+									<dd>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+									</dd>
+								</dl>
+							</div>
+						</li>
+						
+						<li >
+							<em class="list_iconLeft"></em><span class="text1">礼品礼盒</span><span class="list_iconRight">&gt;</span>
+							<div class="hide">
+								<dl>
+									<dt><a href="#">中产品味</a></dt>
+									<dd>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+									</dd>
+								</dl>
+								
+								<dl>
+									<dt><a href="#">中产品味</a></dt>
+									<dd>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+									</dd>
+								</dl>
+								
+								<dl>
+									<dt><a href="#">中产品味</a></dt>
+									<dd>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+									</dd>
+								</dl>
+								
+								<dl>
+									<dt><a href="#">中产品味</a></dt>
+									<dd>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+									</dd>
+								</dl>
+								
+								<dl>
+									<dt><a href="#">中产品味</a></dt>
+									<dd>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+										<a href="#">本来甄选</a>
+									</dd>
+								</dl>
+							</div>
+						</li>
+						
+						
+					</ul>
+					
+				</div>
+				
+				
+			</div>
+			
+			
+			<ul class="nav_list">
+				<li><a href="index.html">首页</a></li>
+				<li><a href="index2.html">本来发布</a></li>
+				<li><a href="index3.html">兑换专区</a></li>
+				<li><a href="index4.html">台创园</a></li>
+				<li><a href="index5.html">全国配</a></li>
+				<li><a href="index6.html">促销</a></li>
+				<li><a href="index7.html">超值宅配</a></li>
+				<li><a href="index8.html">本来礼品</a></li>
+				
+			</ul>
+		</div>
+		
+	</div>
+	<!-----top结束------------------------------------->
+	<!------商品详情页---------------------------------->
+	<div class="pro_listShow_body  container">
+		<div class="title_to">
+			<a href="index.html">首页</a>&nbsp;&gt;&nbsp;<span>南非进口红西柚 2粒装</span>
+		</div>
+		<!--图片-->
+		<div class="proPic_box">
+			<dl class="pro_l">
+				<dt>
+					<a href="javascript:void(0);" id="id1" class="up"></a>
+				</dt>
+				<dd id="smallPic">
+					<a id="p1" class="on" href="javascript:void(0)">
+						<img src="img/pro_list/a1001.jpg"/>
+					</a>
+					<a id="p2"  href="javascript:void(0)">
+						<img src="img/pro_list/a1002.jpg"/>
+					</a>
+					<a id="p3" href="javascript:void(0)">
+						<img src="img/pro_list/a1003.jpg"/>
+					</a>
+					<a id="p4"  href="javascript:void(0)">
+						<img src="img/pro_list/a1004.jpg"/>
+					</a>
+					<a id="p5"  href="javascript:void(0)">
+						<img src="img/pro_list/a1005.jpg"/>
+					</a>
+				</dd>
+				<dt>
+					<a href="javascript:void(0);" id="id1" class="down"></a>
+				</dt>			
+			</dl>
+		
+		<div id="MagnifierWrap">
+			<div class="MagnifierMain" id="MagnifierMain">
+				<img class="MagTargetImg" src="img/pro_list/a1001.jpg">
+			</div>
+		</div>
+		<!--商品编号-->
+		<div class="good_number">
+			商品编号 : <span>P0000039515TC</span>
+		</div>
+		<!--收藏-->
+		<div class="good15_collect" id="good15_collect">
+        	 <a href="javascript:void(0);" hidefocus="true" class="on" id="AddWish" name="39515">收藏</a>
+		</div>
+		<!--分享-->
+		<div class="good15_share">
+	        <dl>
+	            <dt><s></s>分享到</dt>
+	            <dd>
+	                <a href="javascript:;" hidefocus="true" onclick="jdPshowRecommend('http://v.t.sina.com.cn/share/share.php?appkey=000','sina');" id="site-sina" title="推荐到新浪微博">
+	                    <img src="//image.benlailife.com/webStatic/images/n_detail/detail_ico13_bd12b9eb.gif" width="16" height="16" alt="">
+	                </a>
+	                <a href="javascript:;" hidefocus="true" onclick="jdPshowRecommend('http://v.t.qq.com/share/share.php?source=1000002&amp;site=','qzone');" id="site-qzone" title="推荐到腾讯微博">
+	                    <img src="//image.benlailife.com/webStatic/images/n_detail/detail_ico14_b8a43b0e.gif" width="16" height="16" alt="">
+	                </a>
+	                <a href="javascript:;" hidefocus="true" onclick="showQQ()" id="site-qq" title="通过QQ发送链接给好友">
+	                    <img src="//image.benlailife.com/webStatic/images/n_detail/detail_ico15_2642cae0.gif" width="16" height="16" alt="">
+	                </a>
+	
+	            </dd>
+	        </dl>
+	    </div>
+   		<!--分享结束-->
+		</div>
+		<!--图片说明-->
+		<div class="proList_intro">
+			<div class="pro_title">
+				<h1 id="Product_ProductDetailsName">
+		            	南非进口红西柚 2粒装
+		        </h1>
+			</div>
+			<div class="prolis_price">
+				<p class="drop">促销价</p>
+				<p class="price_l">￥<span>15.80</span> <del>本来价￥<em>28.00</em></del></p>
+				<p class="notice">
+					<a href="javascript:void(0)">降价通知</a>
+				</p>
+			</div>
+			<div class="prolis_about">
+				<p class="t1">包装：<span>尝鲜装</span></p>
+				<p class="t2">商品特色：<span>红肉</span></p>
+				<p class="t3">产地：<span>南非</span></p>
+			</div>
+			<div class="carToBuy">
+				<dl>
+					<dt>
+						<input type="text" name="" id="" value="1" id="pro_num"/>
+						<a class="up" id="up" href="javascript:void(0);" hidefocus="true"></a>
+						<a class="down" id="dow" href="javascript:void(0);" hidefocus="true"></a>
+					</dt>
+					<dd>
+						<div class="addCarDiv" id="addCarDiv">
+							<a href="javascript:void(0)"></a>
+						</div>	
+						<div class="good_haoping">
+							好评率
+							<font id="span_scoreCount">98%<a class="down" id="dow" href="javascript:void(0);" hidefocus="true"></a></font>
+							<a href="#tabdiv6"><span id="ping_num">365</span>人评价</a>
+						</div>
+					</dd>
+				</dl>
+			</div>
+			<div class="pro_today">
+				<dl>
+                <dt>
+                    <img src="//image.benlailife.com/webStatic/images/n_detail/detail_ico08_d67de15f.gif" width="25" height="23" alt="">今夜达</dt>
+                    <dd><span class="ArrivalMsg"><s></s>今夜达：北京市区（五环内，包括五环）用户在0:00-12:00下单，可选当日18:00-22:00送达。</span></dd>
+                </dl>
+			</div>
+			<div class="prompt">
+				<p id="tishi"><span >【温馨提示】</span><em>红西柚表皮苦涩，请把果皮剥干净之后再食用</em></p>
+			</div>
+		</div>
+		
+		
+		<div class="contain_prolist">
+			<!--看过还看过-->
+			<div class="box_1">
+				<dl>
+					<dt>看过该商品的还看过</dt>
+					
+						<dd>        
+							<p class="pic">
+								<a href="/item-3143.html" target="_blank" title="嘉云糖粉红柚味200g---德国进口">
+									<img src="//image1.benlailife.com/ProductImages/000/000/003/143/medium/5096a75b-8bdf-4c1d-a3de-3b77fa07f94d.jpg?imageView2/2/format/webp" style="display: inline; opacity: 1;">
+								</a>
+							</p>        
+							<p class="name">
+								<a href="/item-3143.html" target="_blank" title="嘉云糖粉红柚味200g---德国进口">嘉云糖粉红柚味200g---德国进口清爽香甜 口味纯正
+								</a>
+							</p>        
+							<p class="price">￥14.90 </p>    
+						</dd>
+					
+						<dd>        
+							<p class="pic">
+								<a href="/item-3143.html" target="_blank" title="嘉云糖粉红柚味200g---德国进口">
+									<img src="img/pro_list/hai1.jpg" style="display: inline; opacity: 1;">
+								</a>
+							</p>        
+							<p class="name">
+								<a href="/item-3143.html" target="_blank" title="嘉云糖粉红柚味200g---德国进口">泰国进口龙眼 1kg 汁多甜蜜 美味可口 
+								</a>
+							</p>        
+							<p class="price">￥12.8 </p>    
+						</dd>
+						
+						<dd>        
+							<p class="pic">
+								<a href="/item-3143.html" target="_blank" title="嘉云糖粉红柚味200g---德国进口">
+									<img src="img/pro_list/hai2.jpg" style="display: inline; opacity: 1;">
+								</a>
+							</p>        
+							<p class="name">
+								<a href="/item-3143.html" target="_blank" title="嘉云糖粉红柚味200g---德国进口">泰国金柚 1个 果肉晶莹剔透 一剥即开
+								</a>
+							</p>        
+							<p class="price">￥22.40 </p>    
+						</dd>
+				</dl>
+			</div>
+			<!--看过还看过结束-->
+			<div class="box_2">
+				<!--搭配一起购买开始-->
+				<div class="zuhe">
+					<dl>
+						<dt>                        
+							<em><a href="javascript:void(0);" class="on">经常一起购买</a></em> 		                   
+						</dt>
+						<dd>
+							<div class="zuhe_list">
+								<ul>
+									<li>
+										<div class="pic" id="ofMe">
+											<img src="img/pro_list/pro_mid_1.jpg"/>
+										</div>
+										
+										<div class="proName">
+											<a href="javascript:void(0)" id="ofMess">
+												山东精选栖霞富士4粒/0.8-1kg 来自胶东半岛的中国苹果之乡"山东精选栖霞富士4粒来自胶东半岛的中国苹果之乡
+											</a>								
+										</div>
+										<div class="price">
+											￥17.80
+										</div>
+										<div class="checkBuy">
+											<input type="checkbox" id="suixinpei_136" autocomplete="off" value="136" checked="checked" style="width:20px;height:20px;" name="suixinpei" onclick="ChangeResult()">   
+										</div>
+									</li>
+									<li class="plus"></li>
+									<li>
+										<div class="pic">
+											<img src="img/pro_list/dapei101.jpg"/>
+										</div>
+										
+										<div class="proName">
+											<a href="javascript:void(0)">
+												山东精选栖霞富士4粒/0.8-1kg 来自胶东半岛的中国苹果之乡"山东精选栖霞富士4粒来自胶东半岛的中国苹果之乡
+											</a>								
+										</div>
+										<div class="price">
+											￥17.80
+										</div>
+										<div class="checkBuy">
+											<input type="checkbox" id="suixinpei_136" autocomplete="off" value="136" checked="checked"  style="width:20px;height:20px;" name="suixinpei" onclick="ChangeResult()">   
+										</div>
+									</li>
+									<li class="plus"></li>
+									
+									<li>
+										<div class="pic">
+											<img src="img/pro_list/dapei102.jpg"/>
+										</div>
+										
+										<div class="proName">
+											<a href="javascript:void(0)">
+												山东精选栖霞富士4粒/0.8-1kg 来自胶东半岛的中国苹果之乡"山东精选栖霞富士4粒来自胶东半岛的中国苹果之乡
+											</a>								
+										</div>
+										<div class="price">
+											￥17.80
+										</div>
+										<div class="checkBuy">
+											<input type="checkbox" id="suixinpei_136" autocomplete="off" value="136"  style="width:20px;height:20px;" name="suixinpei" onclick="ChangeResult()">   
+										</div>
+									</li>
+									
+									
+									
+								</ul>
+							</div>
+							<div class="tochange">
+								<p class="chose_num">已选择<span>2</span>个商品</p>
+								<p class="chose_price">搭配价<span>33.6</span></p>
+								<div class="addCarDiv" id="addCarDiv">
+									<a href="javascript:void(0)"></a>
+								</div>	
+							</div>
+						</dd>
+					</dl>
+				</div>
+				<!--搭配一起购买结束-->
+				<!--商品详情介绍开始-->
+				<div class="goods_about">
+					<dl>
+						<dt>
+							<p>商品详情</p>
+						</dt>
+						<dd>
+							<div class="title">
+								<img src="img/pro_list/shangpinxiangqing.png"/>
+							</div>
+							<div class="goods_img1">
+								<img src="img/pro_list/goods_feather.jpg"/>
+							</div>
+						</dd>
+					</dl>
+				</div>
+				<!--商品详情介绍结束-->
+			</div>
+		</div>
+		
+	</div>
+	
+	<!---------foot----------------------------------------->
+	<div class="foot">
+		<div class="foot_top ">
+			<div class="container">
+				<dl>
+					<dt>
+						
+					</dt>
+					<dd>
+						<p class="big">8小时低温</p>
+						<p class="little_txt">全程冷链配送</p>
+					</dd>
+				</dl>
+				
+				<dl>
+					<dt>
+						
+					</dt>
+					<dd>
+						<p class="big">0时差基地直供</p>
+						<p class="little_txt">农田到餐桌</p>
+					</dd>
+				</dl>
+				
+				<dl>
+					<dt>
+						
+					</dt>
+					<dd>
+						<p class="big">43项检测</p>
+						<p class="little_txt">安全无农残</p>
+					</dd>
+				</dl>
+				
+				<dl>
+					<dt>
+						
+					</dt>
+					<dd>
+						<p class="big">7*24小时营业</p>
+						<p class="little_txt">全年无休</p>
+					</dd>
+				</dl>
+				<dl class="foot_nomargin">
+					<dt>
+						
+					</dt>
+					<dd>
+						<p class="big">满60免运费</p>
+						<p class="little_txt">今日下单次日送达</p>
+					</dd>
+				</dl>
+			</div>
+		</div>
+		
+		<div class="foot_mid">
+			<dl>
+				<dt>新手指南</dt>
+				<dd>
+					<a href="#">购物流程</a>
+					<a href="#">会员政策</a>
+					<a href="#">联系客服</a>
+					<a href="#">积分政策</a>
+					<a href="#">加入我们</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt>配送方式</dt>
+				<dd>
+					<a href="#">全程冷链</a>
+					<a href="#">配送时间</a>
+					<a href="#">配送范围</a>
+					<a href="#">配送收费标准</a>
+					<a href="#">关于我们</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt>支付方式</dt>
+				<dd>
+					<a href="#">在线支付</a>
+					<a href="#">其他支付方式</a>
+					<a href="#">优惠券使用</a>
+					<a href="#">礼金卡使用</a>
+				</dd>
+			</dl>
+			<dl class="no_margin">
+				<dt>售后服务</dt>
+				<dd>
+					<a href="#">验货于拒收政策</a>
+					<a href="#">退换货政策</a>
+					<a href="#">退换货流程</a>
+					<a href="#">退款流程</a>
+					<a href="#">发票制度</a>
+				</dd>
+			</dl>
+		</div>
+		
+		<div class="foot_bottom">
+			<p class="rexian">客服热线:4008-000-917(周一至周日8:00-20:00)</p>
+			<ul class="foot_ul">
+				<li><a href="#">加入我们</a></li>
+				<li><a href="#">联系我们</a></li>
+				<li><a href="#">关于我们</a></li>
+				<li><a href="#">友情链接</a></li>
+				<li><a href="#">品牌食材</a></li>
+				<li><a href="#">食品流通许可证</a></li>
+				<li><a href="#" class="no_margin">营业执照</a></li>
+			</ul>
+			<ul class="foot_mes">
+				<li  class="gongan"><a href="#"><span></span>京公网安备 11010502022386号</a></li>
+				<li><a href="#">京ICP证120338号</a></li>
+			</ul>
+			<p class="copy">© 2012-2016 Benlai.com. All Rights Reserved. 北京本来工坊科技有限公司</p>
+			<p class="foot_icon">
+				<img src="img/fff.jpg"/>
+			</p>
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+	
+		 
+				
+		(function(){ 
+			
+			var EventUtil,Get; 
+			EventUtil = {
+				addHandler: function(ele, type, handler) {
+					if (ele.addEventListener) {
+						ele.addEventListener(type, handler, false)
+					} else if (ele.attachEvent) {
+						ele.attachEvent("on" + type, handler)
+					} else {
+						ele["on" + type] = handler;
+					}
+				},
+				removeHandler: function(element, type, handler) {
+					if (element.removeEventListener) {
+						element.removeEventListener(type, handler, false);
+					} else if (element.detachEvent) {
+						element.detachEvent("on" + type, handler);
+					} else {
+						element["on" + type] = null;
+					}
+				},
+				getEvent: function(event) {
+					return event ? event : window.event;
+				},
+				getTarget: function(event) {
+					return event.target || event.srcElement;
+				},
+				preventDefault: function(event) {
+					if (event.preventDefault) {
+						event.preventDefault();
+					} else {
+						event.returnValue = false;
+					}
+				},
+				stopPropagation: function(event){
+			        if (event.stopPropagation){
+			            event.stopPropagation();
+			        } else {
+			            event.cancelBubble = true;
+			        }
+			    } 
+			};
+		
+			Get = {
+				byId: function(id) {
+					return typeof id === "string" ? document.getElementById(id) : id
+				},
+				byClass: function(sClass, oParent) {
+					var aClass = [];
+					var reClass = new RegExp("(^| )" + sClass + "( |$)");
+					var aElem = this.byTagName("*", oParent);
+					for (var i = 0; i < aElem.length; i++) reClass.test(aElem[i].className) && aClass.push(aElem[i]);
+					return aClass
+				},
+				byTagName: function(elem, obj) {
+					return (obj || document).getElementsByTagName(elem)
+				}
+			}; 
+			
+			
+		 	
+		
+			function MagnifierF(){ 
+				$("#smallPic").on("mouseover","a",function(){
+					$(this).addClass('on').siblings().removeClass('on');
+					var bigSrc = $(this).children('img').attr('src');
+					$("#MagnifierMain").children("img").attr('src',bigSrc);
+			    });
+				
+				this.init.apply(this,arguments);  
+			}
+			
+			MagnifierF.prototype = {
+				init: function(id){
+					var _is = this; 
+					this.magWrap = Get.byId(id);
+					this.magMain = this.magWrap.children[0];
+					this.mW = this.magMain.offsetWidth;
+					this.mH = this.magMain.offsetHeight;
+					this.magImg = this.magMain.getElementsByTagName('img')[0];
+					this.mImgSrc = $("#MagnifierMain").children("img").attr('src').slice(0,-4);
+		
+					_is.setEventFn().dragEvent();
+				},
+				setEleFn: function(){   
+					var _is = this,
+						_html1 = "",
+						oFrag = document.createDocumentFragment(),
+						oFrag2 = document.createDocumentFragment(); 
+		
+					_is.oMD = document.createElement('div');
+					_is.oMD.className = "MagnifierDrag"; 
+					_is.oMD.style.cssText = 'width:' + _is.mW/3 +'px;height:' + _is.mH/3 + 'px;';
+					_is.oMD.innerHTML = "&nbsp;";
+		
+					_is.oMP =  document.createElement('div');
+					_is.oMP.className = 'MagnifierPop';
+					_is.oMP.style.cssText =  'width:' + _is.mW +'px;height:' + _is.mH + 'px;right:' + (-_is.mW-10) + 'px;';  
+					
+					_is.oMI = document.createElement('div');
+					_is.oMI.className ='MagnifierImg';
+					_is.oMI.style.cssText = 'width:' + _is.mW*3 + 'px;height:' + _is.mH*3 + 'px;';
+					_html1 = '<img style="width:100%;height:100%;" src="' + _is.mImgSrc + '.jpg">'
+					_is.oMI.innerHTML = _html1; 
+		
+					_is.oMP.appendChild(_is.oMI)
+		
+					oFrag.appendChild(_is.oMD);
+					oFrag2.appendChild(_is.oMP);   
+		
+					_is.magMain.appendChild(oFrag);
+					_is.magWrap.appendChild(oFrag2);  
+		
+				},
+				removeFn :function(){
+					var _is = this;
+						_is.magMain.removeChild(_is.oMD);
+						_is.magWrap.removeChild(_is.oMP);  
+				},
+				setMousemoveFn :function(event){
+					var _is = this,
+						 
+						_WinScrLeft = document.documentElement.scrollLeft || document.body.scrollLeft,
+						_WinScrTop = document.documentElement.scrollTop || document.body.scrollTop;
+		
+						_x = event.clientX + _WinScrLeft -  
+						(_is.magWrap.getBoundingClientRect().left  + _WinScrLeft) - _is.oMD.offsetWidth/2; 
+						
+						_y = event.clientY  + _WinScrTop - 
+						(_is.magMain.getBoundingClientRect().top  + _WinScrTop) - _is.oMD.offsetHeight/2;
+						
+						_l = _is.magMain.offsetWidth - _is.oMD.offsetWidth;
+						_t = _is.magMain.offsetHeight - _is.oMD.offsetHeight;
+						
+						_l2 = - (_is.oMI.offsetWidth - _is.magMain.offsetWidth);
+						_t2 = - (_is.oMI.offsetHeight - _is.magMain.offsetHeight);
+		
+						if( _x < 0 )
+				        {
+				            _x = 0;  
+				        }
+				        else if( _x > _l )
+				        {
+				            _x = _l;
+				        }
+				         
+				        if( _y < 0 )
+				        {
+				            _y = 0;  
+				        }
+				        else if( _y > _t )
+				        {
+				            _y = _t;
+				        }
+					 	
+						 
+						_is.oMD.style.left = _x + "px";
+						_is.oMD.style.top  = _y + "px";
+						 
+						
+						_bigx = _x / _l;
+						_bigy = _y / _t;
+							
+		
+						_is.oMI.style.left = _bigx * _l2 + "px";
+						_is.oMI.style.top = _bigy * _t2 + "px";  
+				},
+				setEventFn: function(){
+					var _is = this,
+						_x = 0,
+						_y = 0,
+						_l = 0,
+						_t = 0,
+						_bigx = 0,
+						_bigy = 0,
+						_l2 = 0, 
+						_t2 = 0;
+		
+					function handleEvent(event){
+						event = EventUtil.getEvent(event);   
+		
+						switch(event.type){
+							case "mouseenter":  
+								_is.setEleFn(); 
+							break;
+							case "mousemove": 
+								if (_is.oMD) {
+									_is.setMousemoveFn(event);
+								}
+							break;
+							case "mouseleave":   
+								_is.removeFn(); 
+							break;
+						} 
+						
+					}	
+					return {
+						dragEvent: function() { 
+		
+							EventUtil.addHandler(_is.magMain, "mouseenter", handleEvent);
+							EventUtil.addHandler(_is.magMain, "mousemove", handleEvent);
+							EventUtil.addHandler(_is.magMain, "mouseleave", handleEvent);  
+						} 
+					}
+					
+				} 
+		
+			}
+		
+			window['MagnifierF'] = function(id){
+				return new MagnifierF(id);
+			}
+		
+		})()
+		
+		MagnifierF("MagnifierWrap");
+		
+		var htmlUrl = window.location.href;
+		var thisId = htmlUrl.split('?')[1];
+		//console.log(thisId);
+		getIndexAbout(thisId)
+		function getIndexAbout(proId){
+			$.ajax({
+				type:"get",
+				url:"http://localhost:8080/product/GetProductById_get?id="+proId,
+				async:true,
+				success:function(data){
+					var dataStr = JSON.parse(data).Data;
+					
+					var len = dataStr.length;
+					var m = dataStr.substring(1,len-1)
+					var dataArr =m.split(":");
+					var picsLen = dataArr[1].length;
+					var n = dataArr[1].substring(1,picsLen-1)
+					var picArr = n.split("&");
+					$(".title_to span").text(picArr[6])
+					$("#smallPic #p1").children().attr('src',picArr[1]);
+					$("#smallPic #p2").children().attr('src',picArr[2]);
+					$("#smallPic #p3").children().attr('src',picArr[3]);
+					$("#smallPic #p4").children().attr('src',picArr[4]);
+					$("#smallPic #p5").children().attr('src',picArr[5]);
+					$("#MagnifierMain").children().attr('src',picArr[1]);
+					$("#Product_ProductDetailsName").text(picArr[6]);
+					$(".price_l span").text(picArr[7]);
+					$(".price_l del em").text(picArr[8]);
+					$(".prolis_about .t1 span").text(picArr[9]);
+					$(".prolis_about .t2 span").text(picArr[10]);
+					$(".prolis_about .t3 span").text(picArr[11]);
+					$("#tishi em").text(picArr[12]);
+					$("#ofMe").children().attr('src',picArr[1]);
+					$("#ofMess").text(picArr[6])
+					$(".goods_img1").children().attr('src',picArr[13])
+				}
+			})
+		}
+	</script>
+	</body>
+</html>

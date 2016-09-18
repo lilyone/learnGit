@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="Ajax.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		
+		<br /><br />
+		<input type="text" name="postName" id="postName" value="" />
+		<input type="text" name="postPassword" id="postPassword" value="" />
+		<input type="button" id="regist" value="注册" />
+		
+		
+		<script type="text/javascript">
+			
+			var registName = document.getElementById("postName");
+			var registPassword = document.getElementById("postPassword");
+			
+			var registBtn = document.getElementById("regist");
+			
+			registBtn.onclick = function(){
+				
+				var nameValue = registName.value;
+				var passwordValue = registPassword.value;				
+				var url = "http://localhost:8080/api/Users?name={"+nameValue+"}&password={"+passwordValue+"}";
+				
+				doAjaxRegistPost(url);
+				
+			}
+		</script>
+	</body>
+</html>

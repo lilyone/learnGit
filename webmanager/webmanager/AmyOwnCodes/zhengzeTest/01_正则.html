@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--
+			正则表达式的第二个参数---  g:全局匹配
+			
+			在使用 "g" 参数时，exec() 的工作原理如下：
+		        找到第一个 "e"，并存储其位置
+		        如果再次运行 exec()，则从存储的位置开始检索，并找到下一个 "e"，并存储其位置
+
+		-->
+		<script type="text/javascript">
+			var reg = new RegExp("abc","i");
+			var isReg =reg.test("abcd");//true  g是全局匹配
+			//alert(isReg)
+			var reg = new RegExp("^abc$","i");//^以abc开头   $以abc结尾
+			var isReg1 =reg.test("abcd");//
+			//alert(isReg1)
+			var reg = /zo*/;
+			var isReg2 =reg.test("abczd");//true    *代表0个或者多个
+			//alert(isReg2);
+			
+			
+			//匹配手机号全是数字
+			var reg2 = /^1[0-9]{10}$/;
+			var tel1 = "13780721499";
+			dw(reg2.test(tel1));
+			function dw(parm){
+				document.write(parm+"<br>");
+			}
+		</script>
+	</body>
+</html>

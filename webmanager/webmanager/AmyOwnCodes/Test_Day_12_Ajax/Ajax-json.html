@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="Ajax.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<p id="number">Id</p>
+		<p id="username">uesrname</p>
+		<p id="age">age</p>
+		<p id="img">img</p>
+		<input type="button" id="btn1" value="获取json信息" />
+		
+		<script type="text/javascript">
+			var btn = document.getElementById("btn1");
+			var oNumber = document.getElementById("number");
+			var oName = document.getElementById("username");
+			var oAge  = document.getElementById("age");
+			var oImg = document.getElementById("img");
+			
+			
+			btn.onclick = function(){
+				
+				var url ="http://localhost:8080/api/Users";
+				//不能写全局
+				var xhr = getXmlHttpRequest()
+				
+				//注册
+				var nameValue = registName.value;
+				var passwordValue = registPassword.value;				
+				
+				
+				xhr.open("post","http://localhost:8080/api/Users",true);    //json  //接口为api/Users
+				
+				xhr.send();
+				
+				xhr.onreadystatechange=function(){
+					if(xhr.readyState==4){	
+						if(xhr.status==200){
+							var result =xhr.responseText;
+							
+							var oData = JSON.parse(result);//解析成可读样式
+							
+							oNumber.innerHTML = oData.Id;
+							oName.innerHTML = oData.Name;    //JSON方式
+							oAge.innerHTML = oData.password;	
+							var mImg=document.createElement("img");
+							mImg.src="img/"+oData.ImgSrc;
+							oImg.appendChild(mImg);
+							oImg.innerHTML = oData.ImgSrc;
+							
+						}else{
+							alert("未获取！");
+						}
+					}
+				}
+				
+			}
+		</script>
+	</body>
+</html>

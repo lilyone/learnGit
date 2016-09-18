@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="Ajax.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<p id="username">uesrname</p>
+		<p id="age">age</p>
+		<p id="img"></p>
+		
+		<input type="button" id="btn1" value="提交" />
+		
+		<script type="text/javascript">
+			var btn = document.getElementById("btn1");
+			var oName = document.getElementById("username");
+			var oAge  = document.getElementById("age");
+			var oImg = document.getElementById("img");
+			
+			
+			btn.onclick = function(){
+				var url = "data/data.json" ;
+				doAjaxGet(url,callBack,failFn)
+				
+				function callBack(result){
+					var oData = eval("("+result+")");
+					oName.innerHTML= oData[0].name;
+					oAge.innerHTML= oData[0].age;
+					var iimg = document.createElement("img");
+					iimg.src = "img/"+oData[0].imgsrc;
+					oImg.appendChild(iimg);
+				}
+							
+				function failFn(){
+					alert("未获取！");
+				}
+					
+			}
+				
+			
+		</script>
+	</body>
+</html>

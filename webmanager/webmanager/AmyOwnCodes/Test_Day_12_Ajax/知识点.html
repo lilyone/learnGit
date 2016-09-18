@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<div id="box">
+			box1
+		</div>
+		<div id="box2">
+			box2
+		</div>
+		<input type="button" id="btn" value="同步-换数据" />
+		<input type="button" id="btn2" value="异步-换数据" />
+		<script type="text/javascript">
+			//网站默认端口号为80
+			
+			//同步
+			var btn = document.getElementById("btn");
+			btn.onclick=function(){
+				var xhr;
+				
+				//兼容
+				if(window.XMLHttpRequest){
+					xhr = new XMLHttpRequest();
+				}else{
+					xhr = new ActiveXObject("Microsoft.XMLHTTP");
+				}
+				
+				
+				xhr.open("get","http://127.0.0.1:8020/Test_Day_12_Ajax/data/uaer1.txt",false);
+				xhr.send();
+				var oDiv = document.getElementById("box");
+				if(xhr.status==200){
+					oDiv.innerHTML=xhr.responseText;//string
+				}else{
+					oDiv.innerHTML="未获取！";
+				}
+				
+			}
+			
+			
+			
+			//异步
+			var btn2 = document.getElementById("btn2");
+			btn2.onclick=function(){
+				var xhr;
+				
+				//第一步：兼容
+				if(window.XMLHttpRequest){
+					xhr = new XMLHttpRequest();
+				}else{
+					xhr = new ActiveXObject("Microsoft.XMLHTTP");
+				}
+				
+				//第二步：open
+				xhr.open("get","http://127.0.0.1:8020/Test_Day_12_Ajax/data/user2.txt",true);
+				
+				//第三步：send
+				xhr.send();
+				
+				//第四步：判断状态
+				xhr.onreadystatechange=function(){
+					if(xhr.readyState==4){
+						var oDiv2 = document.getElementById("box2");
+						if(xhr.status==200){
+							oDiv2.innerHTML=xhr.responseText;
+						}else{
+							oDiv2.innerHTML="未获取！";
+						}
+					}
+				}
+				
+				
+				
+			}
+		</script>
+	</body>
+</html>

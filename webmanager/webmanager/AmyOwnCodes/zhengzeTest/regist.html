@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		
+			.regist{
+				height: 250px;
+				background: pink;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="regist">
+			<h2>注册：</h2>
+			用户名：<input type="text" id="username" value="" placeholder="请输入用户名"/>
+			<br /><br />
+			密码：<input type="password" id="pass" value="" placeholder="密码必须为6位数字"/>
+			<br /><br />
+			确认密码：<input type="password" id="repass" value="" />
+			<br /><br />
+			<input type="button" id="btn1" value="注册" />
+		</div>
+		
+		
+		<script type="text/javascript">
+		//注册
+			var userName = document.getElementById("username");
+			var pass = document.getElementById("pass");
+			var rePass = document.getElementById("repass");
+			var btn1 = document.getElementById("btn1");
+			//检测用户名是否已经存在
+			userName.onblur = function(){
+				var nameValue = userName.value;	
+				//用户名只能为汉字
+				
+				checkName(nameValue);
+			}
+			////密码必须为6位数字
+			pass.onchange = function(){
+				var passValue = pass.value;
+				//正则表达式
+				var reg = /[0,9]{6}/;
+				var check = reg.test(passValue);
+				if(check == false){
+					alert("密码只能为6位数字");
+					pass.value = "";
+				}
+			}
+			rePass.onchange = function(){
+				var passValue = pass.value;
+				var repassValue = rePass.value;
+				if(repassValue != passValue){
+					alert("密码不一致,请重新输入!");
+					rePass.value = "";
+				}
+			}
+			//点击注册
+			btn1.onclick = function(){
+				var nameValue = userName.value;	
+				var passValue = pass.value;
+				//检测用户名是否已存在
+				checkName(nameValue);
+				
+				
+				
+				//注册
+				regist(nameValue,passValue);
+		       
+			}		
+			
+			
+			function checkName(username){
+				//Ajax检测用户名是否已经存在
+				var xhr;
+				if(window.XMLHttpRequest){
+					xhr = new XMLHttpRequest();
+				}else{
+					xhr = new ActiveXObject("Microsoft.XMLHTTP");
+				}	
+				xhr.open("get","http://localhost:8080/user/CheckUserNameGet?username="+username,true);    //json			
+       			xhr.send();
+				xhr.onreadystatechange=function(){
+					if(xhr.readyState==4){	
+						if(xhr.status==200){
+							var result =xhr.responseText;							
+							var oData = JSON.parse(result);//解析成可读样式							
+							if(oData == 1){
+									alert("该用户名已被注册！！");
+									userName.value = "";
+								}
+							
+						}else{
+							alert("未获取！");
+						}
+					}
+				}
+				
+			}
+			//注册
+			function regist(userName,passWord){
+				var xhr;
+		        if (window.XMLHttpRequest) {
+			        xhr = new XMLHttpRequest();
+			    } else {
+			        xhr = new ActiveXObject("Microsoft.XMLHTTP");
+			    }
+			    
+			    xhr.open("POST", "http://localhost:8080/user/register", true);
+		        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		        xhr.send("name="+userName+"&password="+passWord);
+		
+		        xhr.onreadystatechange = function () {
+			        if (xhr.readyState == 4) {
+				        if (xhr.status == 200) {
+					        var result =xhr.responseText;							
+							var oData = JSON.parse(result);//解析成可读样式	
+							if(oData == 1){
+								alert("注册成功！！！");
+							}else{
+								alert("注册失败！！")
+							}
+							
+				        } else {
+				       		alert("Ajax失败");
+				        }
+			        }
+		        }
+			}
+			
+			
+		</script>
+	</body>
+</html>

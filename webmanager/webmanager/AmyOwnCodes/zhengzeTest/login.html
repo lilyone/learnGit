@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登录页面</title>
+		<style type="text/css">
+			.login{
+				height: 150px;
+				background: lightskyblue;
+			}
+			a{
+				text-decoration: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="login">
+			<h2>登录：</h2>
+			用户名：<input type="text" id="username1" value="" placeholder="请输入用户名"/>
+			<br /><br />
+			密码：<input type="password" id="pass1" value="" />
+			<br /><br />
+			<input type="button" id="btn2" value="登录" />
+			<a href="regist.html">新用户注册</a>
+		</div>
+		
+		<script type="text/javascript">
+			//登录
+			
+			var userName2 = document.getElementById("username1");
+			var pass2 = document.getElementById("pass1");
+			var btn2 = document.getElementById("btn2");
+			btn2.onclick = function(){
+				var nameValue = userName2.value;
+				var passWord = pass2.value;
+				//验证登录
+				checkLogin(nameValue,passWord);
+				
+			}
+			
+			//登录验证
+			function checkLogin(userName,passWord){
+				//Ajax
+				var xhr;
+				if(window.XMLHttpRequest){
+					xhr = new XMLHttpRequest();
+				}else{
+					xhr = new ActiveXObject("Microsoft.XMLHTTP");
+				}	
+				xhr.open("post","http://localhost:8080/user/login",true);    //json			
+				xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+				xhr.send("name="+userName+"&password="+passWord);
+				
+				xhr.onreadystatechange=function(){
+					if(xhr.readyState==4){	
+						if(xhr.status==200){
+							var result =xhr.responseText;							
+							var oData = JSON.parse(result);//解析成可读样式							
+							if(oData == 1){
+								alert("登陆成功！！");
+							}else{
+								alert("用户名或者密码错误！！！");
+							}
+							
+						}else{
+							alert("未获取！");
+						}
+					}
+				}		
+			}
+		</script>
+	</body>
+</html>

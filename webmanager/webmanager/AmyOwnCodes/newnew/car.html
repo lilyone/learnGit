@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>购物车</title>
+		<link rel="stylesheet" type="text/css" href="css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="css/car.css"/>
+		<script src="js/jquery-3.0.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/Cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<!--侧边栏-->
+		<div class="right_show">
+			<a href="#head" class="to_top"></a>
+			<div class="bigClude">
+				<div id="goodsIncar">
+					<dl>
+						<dt><img src="img/index3/dui19.jpg"/></dt>
+						<dd>
+							<p>文莱有机生蓝虾51/60 300g/袋</p>
+							<em>X1加入成功</em>
+							<em id="nowPrice">￥100.8</em>
+						</dd>
+					</dl>
+				</div>
+				<a href="car.html" class="to_buy" id="to_buy">
+					<span id="pro_count">0</span>
+				</a>		
+			</div>
+				
+			<a href="#" class="to_ask"></a>
+			<a href="#" class="to_erwei"></a>
+		</div>
+		<!--head-->
+		<div class="head carContainer" id="head" style="border-bottom: 1px solid #e5e5e5;">
+			<div class="h_left">
+				<span>您好，请</span><a href="login.html">[登录]</a><a href="regist.html">[注册]</a><a href="#">[机构会员]</a>
+			</div>
+			
+			<ul class="h_right">
+				<li><a href="#">我的订单</a></li>
+				<li><a href="#">本来礼品</a></li>
+				<li id="handPhone"><a href="#">掌上本来</a></li>
+				<li id="c_fu"><a href="#">客户服务<span></span></a></li>
+			</ul>
+		</div>
+		<!-----购物车开始----------------------------------------------------------------->
+		<div class="carTop carContainer">
+			<h1><a href="index.html" class="car_logo"><img src="img/carLogo.gif"/></a></h1>
+			<div id="carStatus">
+				<img src="img/carStatus.gif"/><!--550*46-->
+			</div>
+		</div>
+		<div class="myCar carContainer">
+			<div class="titleOfCar">
+				我的购物车
+			</div>
+			<div class="carBody">
+				<div class="baoyou" id="baoyou">
+					<span></span><a href="index.html">北京市满60.00元包邮，您还差<em style="color: orangered;">60.00</em>元，去凑单</a>
+				</div>
+				<ul class="cartTitle" id="carTitle">            
+					<input type="checkbox" name="proselectall" boxtype="a">
+					<span style="margin-right: 50px;">全选</span>
+					<span style="margin-right: 290px;">商品</span>
+					<span style="margin-right: 110px;">单价</span>
+					<span style="margin-right: 75px;">购买数量</span>
+					<span style="margin-right: 60px;">小计</span>
+					<span style="margin-right: 35px;">库存状态</span>操作        
+					
+				</ul>
+				<div id="haveNoPro">
+					<p>您还没有购买过商品，<a href="index.html">去逛逛吧</a></p>
+				</div>
+				<ul id="carBody"> 
+					
+					<!--<li>  
+						<div class="check">
+							<input type="checkbox" checked="checked">
+						</div>                          
+						<div class="pic">
+							<a href="" target="_blank">
+								<img src="https://image3.benlailife.com/ProductImages/000/000/275/902/medium/2ca81316-be3b-4044-b113-bb36f4f6ac42.jpg">
+							</a>
+						</div>                          
+						<div class="name">
+							<a href="/item-275902.html" target="_blank">三去无公害黄花鱼 1kg 两条装 来自深海的回味鲜而不腥</a> 
+						</div>                          
+						<div class="price">128.00</div>
+						<div class="num_toBuy">
+							<p>
+								<a href="javascript:void(0)">
+									<img src="img/sub.gif" width="15" height="15">
+								</a>
+							</p>
+							<p class="num">
+								<input data-type="input" data-producttype="0" data-productid="275902" data-productvalue="1" type="text" class="textgt_n" value="1" maxlength="3">
+							</p>
+							<p>
+								<a href="javascript:void(0)">
+									<img src="img/add.gif" width="15" height="15">
+								</a>
+							</p>
+						</div>                          
+						<div class="subtotal">128.00</div> 
+						<div class="distribution">有货</div> 
+						<div class="pro_do">
+							<a  href="javascript:;">收藏</a>
+							<br>
+							<a class="mt5"  href="javascript:;">删除</a>
+						</div>                    
+					</li> -->
+					
+					
+				</ul>
+				<div class="totalChange">
+					<p id="allPrice">商品总金额<span>666</span>元</p>
+					<p id="allPrices">已选择<span>4</span>件商品，金额=<span id="qwe">666</span></p>
+					<div class="toPay"></div>
+					<a href="index.html" id="goOn">继续购物</a>	
+					
+				</div>
+				
+				
+			</div>
+		</div>
+		
+		
+		<!-----------foot开始----------------------------------------------------------->		
+		<div class="foot">
+		<div class="foot_top ">
+			<div class="container">
+				<dl>
+					<dt>
+						
+					</dt>
+					<dd>
+						<p class="big">8小时低温</p>
+						<p class="little_txt">全程冷链配送</p>
+					</dd>
+				</dl>
+				
+				<dl>
+					<dt>
+						
+					</dt>
+					<dd>
+						<p class="big">0时差基地直供</p>
+						<p class="little_txt">农田到餐桌</p>
+					</dd>
+				</dl>
+				
+				<dl>
+					<dt>
+						
+					</dt>
+					<dd>
+						<p class="big">43项检测</p>
+						<p class="little_txt">安全无农残</p>
+					</dd>
+				</dl>
+				
+				<dl>
+					<dt>
+						
+					</dt>
+					<dd>
+						<p class="big">7*24小时营业</p>
+						<p class="little_txt">全年无休</p>
+					</dd>
+				</dl>
+				<dl class="foot_nomargin">
+					<dt>
+						
+					</dt>
+					<dd>
+						<p class="big">满60免运费</p>
+						<p class="little_txt">今日下单次日送达</p>
+					</dd>
+				</dl>
+			</div>
+		</div>
+		
+		<div class="foot_mid">
+			<dl>
+				<dt>新手指南</dt>
+				<dd>
+					<a href="#">购物流程</a>
+					<a href="#">会员政策</a>
+					<a href="#">联系客服</a>
+					<a href="#">积分政策</a>
+					<a href="#">加入我们</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt>配送方式</dt>
+				<dd>
+					<a href="#">全程冷链</a>
+					<a href="#">配送时间</a>
+					<a href="#">配送范围</a>
+					<a href="#">配送收费标准</a>
+					<a href="#">关于我们</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt>支付方式</dt>
+				<dd>
+					<a href="#">在线支付</a>
+					<a href="#">其他支付方式</a>
+					<a href="#">优惠券使用</a>
+					<a href="#">礼金卡使用</a>
+				</dd>
+			</dl>
+			<dl class="no_margin">
+				<dt>售后服务</dt>
+				<dd>
+					<a href="#">验货于拒收政策</a>
+					<a href="#">退换货政策</a>
+					<a href="#">退换货流程</a>
+					<a href="#">退款流程</a>
+					<a href="#">发票制度</a>
+				</dd>
+			</dl>
+		</div>
+		
+		<div class="foot_bottom">
+			<p class="rexian">客服热线:4008-000-917(周一至周日8:00-20:00)</p>
+			<ul class="foot_ul">
+				<li><a href="#">加入我们</a></li>
+				<li><a href="#">联系我们</a></li>
+				<li><a href="#">关于我们</a></li>
+				<li><a href="#">友情链接</a></li>
+				<li><a href="#">品牌食材</a></li>
+				<li><a href="#">食品流通许可证</a></li>
+				<li><a href="#" class="no_margin">营业执照</a></li>
+			</ul>
+			<ul class="foot_mes">
+				<li  class="gongan"><a href="#"><span></span>京公网安备 11010502022386号</a></li>
+				<li><a href="#">京ICP证120338号</a></li>
+			</ul>
+			<p class="copy">© 2012-2016 Benlai.com. All Rights Reserved. 北京本来工坊科技有限公司</p>
+			<p class="foot_icon">
+				<img src="img/fff.jpg"/>
+			</p>
+		</div>
+	</div>
+	<script type="text/javascript">
+		//显示购物车信息
+		var cartList =document.getElementById("carBody");
+		var products = getCookie("cartCookie");
+		var allTotalP = 0;
+		var arrProducts = [];//存放所有商品；
+		var totalPrice;
+		if(products.length>0){
+			arrProducts=JSON.parse(products);	
+			cartList.innerHTML='';
+			for(var i=0;i<arrProducts.length;i++){
+				showProduct(arrProducts[i]);
+				allTotalP+= Number(arrProducts[i].totalPrice);
+			}
+		}
+		$("#allPrice span").text((allTotalP).toFixed(2));
+		$("#allPrices #qwe").text((allTotalP).toFixed(2));
+		//包邮
+		if((allTotalP).toFixed(2)<60){
+			$(".baoyou").css({"display":"block"});
+			var cha = (60-allTotalP).toFixed(2);
+			$("#baoyou").children("a").children().text(cha)
+		}else{
+			$(".baoyou").css({"display":"none"});
+		}
+		
+		//展示商品
+		function showProduct(productInfo){
+			var cartList =document.getElementById("carBody");			
+			var html = "<li class=\"lisPro\"><div class=\"check\"><input type=\"checkbox\" checked=\"checked\"></div>";                          
+			html+="<div class=\"pic\"><a href=\"#\" target=\"_blank\">";
+			html+="<img src=\""+productInfo.img+"\"></a>\</div>\<div class=\"name\">";
+			html+="<a href=\"/item-275902.html\" target=\"_blank\"><span>"+productInfo.proName+"</span><em>"+productInfo.about+"</em></a>";
+			html+="</div><div class=\"price\">"+productInfo.price+"</div><div class=\"num_toBuy\"><p class=\"subBtn\"><a href=\"javascript:void(0)\">";
+			html+="<img src=\"img/sub.gif\" width=\"15\" height=\"15\"></a></p><p class=\"num\">";
+			html+="<input type=\"text\" class=\"textgt_n\" value=\""+productInfo.count+"\" maxlength=\"3\"></p><p class=\"addBtn\">";
+			html+="<a href=\"javascript:void(0)\"><img src=\"img/add.gif\" width=\"15\" height=\"15\">";
+			html+="</a></p></div><div class=\"subtotal\" >"+productInfo.totalPrice+"</div><div class=\"distribution\">有货</div>";
+			html+="<div class=\"pro_do\"><a  href=\"javascript:;\">收藏</a><br><a href=\"javascript:;\" class=\"delPro\">删除</a></div></li>"; 
+			cartList.innerHTML+=html;
+		}
+		
+		
+		
+		function cookieChange(nameP,count,totalPrice){
+			for(var j=0;j<arrProducts.length;j++){
+				
+				if(arrProducts[j].proName==nameP){
+					
+					arrProducts[j].count=count;
+					arrProducts[j].totalPrice= totalPrice;
+				}
+			}		
+			//购物车信息更新以后，cookie信息也要更新，重新写入覆盖之前的
+			var strProducts = JSON.stringify(arrProducts);
+			setCookie("cartCookie",strProducts,30);
+		}
+		
+		$(".lisPro").on("click",".addBtn",function(){
+			$("#pro_count").text(Number($("#pro_count").text())+1)
+			var nameP = $(this).parent().siblings(".name").children().children("span").text();
+			var nowNum = Number($(this).siblings(".num").children().val())+1;
+			$(this).siblings(".num").children().val(nowNum);
+			var prePrice = Number($(this).parent().siblings(".price").text());
+			var totalP = (nowNum*prePrice).toFixed(2);
+			$(this).parent().siblings(".subtotal").text(totalP);
+			cookieChange(nameP,nowNum,totalP);
+			allTotalP += prePrice;
+			$("#allPrice span").text((allTotalP).toFixed(2));
+			$("#allPrices #qwe").text((allTotalP).toFixed(2));
+			
+			if((allTotalP).toFixed(2)<60){
+				$(".baoyou").css({"display":"block"});
+				var cha = (60-allTotalP).toFixed(2);
+				$("#baoyou").children("a").children().text(cha)
+			}else{
+				$(".baoyou").css({"display":"none"});
+			}
+		})
+		
+		$(".lisPro").on("click",".subBtn",function(){
+			$("#pro_count").text(Number($("#pro_count").text())-1);
+			var nowNum = Number($(this).siblings(".num").children().val())-1;
+			var nameP = $(this).parent().siblings(".name").children().children("span").text();
+			if(nowNum>=1){
+				$(this).siblings(".num").children().val(nowNum);
+				var prePrice = Number($(this).parent().siblings(".price").text());
+				var totalP = (nowNum*prePrice).toFixed(2);
+				$(this).parent().siblings(".subtotal").text(totalP);
+				cookieChange(nameP,nowNum,totalP);
+				allTotalP -= prePrice;
+				$("#allPrice span").text((allTotalP).toFixed(2));
+				$("#allPrices #qwe").text((allTotalP).toFixed(2));
+			}
+			if((allTotalP).toFixed(2)<60){
+				$(".baoyou").css({"display":"block"});
+				var cha = (60-allTotalP).toFixed(2);
+				$("#baoyou").children("a").children().text(cha)
+			}else{
+				$(".baoyou").css({"display":"none"});
+			}
+			
+		})
+		
+		$(".lisPro").on("click",".delPro",function(){
+			var  delMes =confirm("您确定要删除该商品吗？");
+			var  delName = $(this).parent().siblings(".name").children().children("span").text();
+			var  delCount = Number($(this).parent().siblings(".num_toBuy").children(".num").children().val());
+			var  delPrice = Number($(this).parent().siblings(".price").text());
+			var  preDelCount = Number($("#to_buy #pro_count").text());
+			var  lastNum = preDelCount-delCount ;
+			if (lastNum == 0){
+				$("#to_buy").css({"background":"url(img/shoppingcar.gif) no-repeat -12px -1px","border":"1px solid #eee","border-left":"0px"});
+			}
+			if(delMes){
+				$("#to_buy #pro_count").text(lastNum);
+				$(this).parent().parent().remove();
+				for(var j=0;j<arrProducts.length;j++){
+					if(arrProducts[j].proName==delName){
+						arrProducts.splice(j,1);
+					}
+				}
+				var strProducts = JSON.stringify(arrProducts);
+				setCookie("cartCookie",strProducts,30);
+				allTotalP -= delPrice*delCount;
+				$("#allPrice span").text((allTotalP).toFixed(2));
+				$("#allPrices #qwe").text((allTotalP).toFixed(2));
+				if(allTotalP ==0){
+					$("#haveNoPro").css("display","block");
+					$(".totalChange").css({"display":"none"});
+				}
+				
+			}
+			
+			if((allTotalP).toFixed(2)<60){
+				$(".baoyou").css({"display":"block"});
+				var cha = (60-allTotalP).toFixed(2);
+				$("#baoyou").children("a").children().text(cha)
+			}else{
+				$(".baoyou").css({"display":"none"});
+			}
+			
+		})
+		
+		
+		
+		
+		
+		
+		
+		
+		
+					
+//		allPriceAndNumber(arrProducts);
+	</script>
+	</body>
+</html>

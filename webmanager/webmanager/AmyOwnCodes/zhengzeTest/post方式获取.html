@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			userName.onblur = function(){
+				var nameValue = userName.value;		
+				//Ajax
+				var xhr;
+				if(window.XMLHttpRequest){
+					xhr = new XMLHttpRequest();
+				}else{
+					xhr = new ActiveXObject("Microsoft.XMLHTTP");
+				}	
+				xhr.open("post","http://localhost:8080/user/CheckUserName",true);    //json		
+				//post必须有setRequestHeader
+				xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+       			xhr.send("username="+nameValue);
+				xhr.onreadystatechange=function(){
+					if(xhr.readyState==4){	
+						if(xhr.status==200){
+							var result =xhr.responseText;							
+							var oData = JSON.parse(result);//解析成可读样式							
+							if(oData == 1){
+									alert("该用户名已被注册！！");
+									userName.value = "";
+								}else{
+									alert("可以")
+								}
+							
+						}else{
+							alert("未获取！");
+						}
+					}
+				}		
+			}
+			
+			//点击注册
+			btn1.onclick = function(){
+				var nameValue = userName.value;	
+				var passValue = pass.value;
+				var xhr;
+		        if (window.XMLHttpRequest) {
+			        xhr = new XMLHttpRequest();
+			    } else {
+			        xhr = new ActiveXObject("Microsoft.XMLHTTP");
+			    }
+		
+		        xhr.onreadystatechange = function () {
+			        if (xhr.readyState == 4) {
+				        if (xhr.status == 200) {
+					        var result =xhr.responseText;							
+							var oData = JSON.parse(result);//解析成可读样式	
+							alert(oData);
+				        } else {
+				       		alert("失败");
+				        }
+			        }
+		        }
+		
+		        xhr.open("post", "http://localhost:8080/user/register", true);
+		        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		        xhr.send("name="+nameValue+"&password="+passValue);
+			}
+		</script>
+	</body>
+</html>

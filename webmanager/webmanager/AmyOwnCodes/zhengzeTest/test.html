@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box{
+				width: 600px;
+				height: 500px;
+				background: pink;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="text" name="pro" id="pro" value="" />
+		<input type="button" id="btn" value="获取" />
+		
+		<div class="box"></div>	
+		<script type="text/javascript">
+			var btn = document.getElementById("btn");
+			var pro = document.getElementById("pro");
+			btn.onclick = function(){
+				var nameValue = pro.value;	
+				var mm = {"Id":"88","name":"lilyone"};
+				var nn =JSON.stringify(mm)
+				var xhr;
+		        if (window.XMLHttpRequest) {
+			        xhr = new XMLHttpRequest();
+			    } else {
+			        xhr = new ActiveXObject("Microsoft.XMLHTTP");
+			    }
+				
+				//存商品信息
+				//xhr.open("get", "http://localhost:8080/product/CreateUpdateProduct_get?id="+nameValue+"&datajson="+nn, true);
+				//通过ID获取商品信息
+				//http://localhost:8080/product/GetProductById_get?id=100
+				xhr.open("get", "http://localhost:8080/product/GetProductById_get?id="+nameValue, true);
+		        xhr.send();
+				
+		        xhr.onreadystatechange = function () {
+			        if (xhr.readyState == 4) {
+				        if (xhr.status == 200) {
+					        var result =xhr.responseText;							
+							var oData = JSON.parse(result);//解析成可读样式	
+							alert(oData.Data);
+				        } else {
+				       		alert("失败");
+				        }
+			        }
+		        }
+		       
+			}
+		</script>
+	</body>
+</html>
+<!--
+	
+	$("button").on("click",function(){
+		var mm = {"name":"aaaaaaaa"};
+		var nn =JSON.stringify(mm)
+		$.ajax({
+			type:"get",
+//			url:"http://localhost:8080/product/GetProductById_get?id=AD_show",
+			url:"http://localhost:8080/product/CreateUpdateProduct_get",
+			
+			data:{
+				"id":"AD_show",
+				"datajson":nn
+			},
+			success:function(data){
+				alert(1);
+			},
+			dataType:"json"
+		});
+	})
+	
+	
+	
+	
+-->

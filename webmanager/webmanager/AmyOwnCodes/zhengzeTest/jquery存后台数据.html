@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--
+			
+			$("button").on("click",function(){
+				var mm = {"name":"aaaaaaaa"};
+				var nn =JSON.stringify(mm)
+				$.ajax({
+					type:"get",
+		//			url:"http://localhost:8080/product/GetProductById_get?id=AD_show",
+					url:"http://localhost:8080/product/CreateUpdateProduct_get",
+					
+					data:{
+						"id":"AD_show",
+						"datajson":nn
+					},
+					success:function(data){
+						alert(1);
+					},
+					dataType:"json"
+				});
+			})
+			
+			
+		-->
+		
+		取数据
+		<!--
+			$("button").on("click",function(){
+				$.ajax({
+					type:"get",
+					url:"http://localhost:8080/product/GetProductById_get?id=88",
+					async:true,
+					success:function(data){
+						$(".box").text(JSON.parse(JSON.parse(data).Data).Id);
+					}
+				});
+			})
+			
+			
+			
+			
+			
+		-->
+	</body>
+</html>

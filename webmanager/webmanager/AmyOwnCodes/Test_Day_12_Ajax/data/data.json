@@ -1,0 +1,13 @@
+//只能存在一个数组
+[
+	{
+	"name":"lily",
+	"age":2,
+	"imgsrc":"002.jpg"
+	},
+	{
+	"name":"xioaming",
+	"age":2,
+	"imgsrc":"003.jpg"
+	}
+]
